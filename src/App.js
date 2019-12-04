@@ -15,9 +15,11 @@ class App extends Component {
   }
 
   minusOneFromCounterHandler = () => {
-    this.setState({
-      counter: this.state.counter - 1
-    })
+    if (this.state.counter > 0) {
+      this.setState({
+        counter: this.state.counter - 1
+      })
+    }
   }
 
   render() {
